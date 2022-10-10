@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>monami-main-ui</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!--aos-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--swiper-->
+    <!--비교적 쉬움 구글링 하면 디자인 수정법도 적혀있음 확인할 것-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <style media="screen"></style>
+</head>
+
+<body>
+    <header>
+        
+        <input type="checkbox" id="menu-toggle" />
+        <label id="trigger" for="menu-toggle"></label>
+        <label id="burger" for="menu-toggle"></label>
+        <ul id="menu">
+            <li style="margin-top: 200px;"><a href="#" style="font-size: 2rem;">모나미소개</a></li>
+            <li><a href="#" style="font-size: 2rem;">모나미제품</a></li>
+            <li><a href="#" style="font-size: 2rem;">NEWS &amp; VIDEO</a></li>
+            <li><a href="#" style="font-size: 2rem;">모나미 미술대회</a></li>
+            <li><a href="#" style="font-size: 2rem;">고객지원</a></li>
+            <li><a href="#" style="font-size: 2rem;">기업 구매 / 개발</a></li>
+        </ul>
+    </header>
+    <main id="mainBg">
+        <div class="paddings">
+            <div class="logo"><img src="https://raw.githubusercontent.com/heyangineer/monami-main-ui/37f06a916e820e79191c2edf30058a847c22da77/img/logo.png"></div>
+            <div></div>
+            <div class="space-betweens">
+                <div class="main-text">
+                    <h2 class="lefts">신제품</h2>
+                    <h4 class="lefts">NEW PRODUCT</h4>
+                    <h1 class="lefts">FX ZETA C3</h1>
+                    <div>
+                        <section id="swtext1">
+                            <p>MULTICOLOR PEN</p>
+                            <p>미끄러움을 방지하고 편안한 그립감을 제공하는 패턴 그립</p>
+                            <p>￦4,000</p>
+                        </section>
+                        <section id="swtext2">
+                            <p>MULTICOLOR PEN</p>
+                            <p>실리콘 파트 구조를 적용하여 노크 소음을 최소화한 디자인</p>
+                            <p>￦4,000</p>
+                        </section>
+                        <section id="swtext3">
+                            <p>MULTICOLOR PEN</p>
+                            <p>유격을 최소화하여 흔들림 없이 안정감 있는 필기감 제공</p>
+                            <p>￦4,000</p>
+                        </section>
+                    </div>
+                    <div class="Bu1"> BUY NOW <i class="xi-long-arrow-right"></i> </div>
+                </div>
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"> <img src="https://github.com/heyangineer/monami-main-ui/blob/main/img/main7%5D.png?raw=true" alt=""> </div>
+                        <div class="swiper-slide"> <img src="https://raw.githubusercontent.com/heyangineer/monami-main-ui/14b46374295b4a8e10dafe79d5177b556dcfeefe/img/main8.png" alt=""> </div>
+                        <div class="swiper-slide"> <img src="https://raw.githubusercontent.com/heyangineer/monami-main-ui/14b46374295b4a8e10dafe79d5177b556dcfeefe/img/main9.png" alt=""> </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="shadow"></div>
+            <script>
+                var swiper = new Swiper(".mySwiper", {
+                    on: {
+                        slideChangeTransitionEnd: function () {
+                            if (this.realIndex == 0) {
+                                document.getElementById("swtext1").style.display = "block";
+                                document.getElementById("swtext2").style.display = "none";
+                                document.getElementById("swtext3").style.display = "none";
+                                document.getElementById("mainBg").style.backgroundColor = "#cbb8a9";
+                            }
+                            if (this.realIndex == 1) {
+                                document.getElementById("swtext1").style.display = "none";
+                                document.getElementById("swtext2").style.display = "block";
+                                document.getElementById("swtext3").style.display = "none";
+                                document.getElementById("mainBg").style.backgroundColor = "#a5a8d5";
+                            }
+                            if (this.realIndex == 2) {
+                                document.getElementById("swtext1").style.display = "none";
+                                document.getElementById("swtext2").style.display = "none";
+                                document.getElementById("swtext3").style.display = "block";
+                                document.getElementById("mainBg").style.backgroundColor = "#aed9ae";
+                            };
+                        }
+                    , }
+                    , slidesPerView: 1
+                    , spaceBetween: 1
+                    , loop: true
+                    , navigation: {
+                        nextEl: ".swiper-button-next"
+                        , prevEl: ".swiper-button-prev"
+                    , }
+                , });
+            </script>
+        </div>
+    </main>
+    <article></article>
+</body>
+
+</html>
